@@ -4,6 +4,7 @@ import order_icon from './order_icon.png'
 import upload_area from './upload_area.png'
 import parcel_icon from './parcel_icon.svg'
 import logo1 from './logo1.jpg'
+import logo4 from './logo4.png'
 import order from './icons8-order-50.png'
 
 export const assets = {
@@ -13,6 +14,7 @@ export const assets = {
     upload_area,
     parcel_icon,
     logo1,
-    order
+    order,
+    logo4
 }
 
