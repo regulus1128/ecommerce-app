@@ -123,7 +123,7 @@ export const ShopContextProvider = (props) => {
             const response = await axios.get(backendUrl + '/api/product/list-product-public', { 
                 withCredentials: true
             });
-            console.log('product response: ', response);
+            // console.log('product response: ', response);
             if(response.data.success){
                 setProducts(response.data.products);
             } else{
@@ -157,7 +157,7 @@ export const ShopContextProvider = (props) => {
         const checkAuth = async () => {
             try {
                 const response = await axios.get(backendUrl + "/api/user/check-auth", { withCredentials: true });
-                console.log('Response in check auth', response);
+                // console.log('Response in check auth', response);
                 if (response.data.authenticated) {
                     setToken(response.data.userId);
                     getUserCart(response.data.userId);
@@ -178,7 +178,7 @@ export const ShopContextProvider = (props) => {
         if(savedToken){
             setToken(savedToken);
         }
-        console.log('userToken: ', savedToken);
+        // console.log('userToken: ', savedToken);
     }, [])
 
     
