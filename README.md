@@ -1,4 +1,4 @@
-# 👟 SoleVibe - E-Commerce Shoe Store
+# 👟 SoleVibe: E-Commerce Shoe Store
 
 SoleVibe is a full-stack e-commerce platform for browsing and purchasing stylish shoes. Built with **React** and **TailwindCSS** on the frontend and **Node.js**, **Express**, and **MongoDB** on the backend, SoleVibe offers seamless shopping, order placement, product management, and user interaction features.
 
