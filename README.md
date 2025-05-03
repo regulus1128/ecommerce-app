@@ -9,6 +9,8 @@ SoleVibe is a full-stack e-commerce platform for browsing and purchasing stylish
 - 🛍️ Product listing with categories and subcategories (Men, Women, Kids)
 - 🔍 Product detail pages with multiple images and sizes
 - 🧺 Cart management with quantity control
+- ❤️ Add/remove products to a personal wishlist
+- ⭐ Rate and review products (with edit support)
 - 🧾 Order placement with support for:
   - COD
   - Stripe
