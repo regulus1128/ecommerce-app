@@ -31,7 +31,6 @@ const Navbar = () => {
     const fetchUserDetails = async () => {
       try {
         const response = await axios.get(backendUrl + '/api/user/get-user-details', { withCredentials: true });
-        console.log('response in navbar ', response.data.user);
         if(response.data.success){
           setUserDetails(response.data.user);
         }

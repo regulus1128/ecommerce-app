@@ -41,10 +41,6 @@ const List = () => {
     }
   }
 
-  const handleEdit = async (id) => {
-    // Navigate to the edit page
-    navigate(`/edit/${id}`);
-  }
 
   useEffect(() => {
     fetchList();
@@ -68,8 +64,8 @@ const List = () => {
               <p className='text-center lato-regular'>{item.name}</p>
               <p className='text-center lato-regular'>{item.category}</p>
               <p className='text-center lato-regular'>{currency} {item.price}</p>
-              <div className='flex flex-col items-center'>
-                <button onClick={() => handleEdit(item._id)} className='md:text-center cursor-pointer bg-green-500 hover:bg-green-600 px-3 py-2 w-18 rounded-sm text-white lato-regular'>Edit</button>
+              <div className='flex items-center'>
+                
                 <p onClick={() => deleteItem(item._id)} className='md:text-center cursor-pointer bg-red-500 hover:bg-red-600 px-3 py-2 w-18 mt-1 rounded-sm text-white lato-regular'>Delete</p>
               </div>
               <hr className='border-gray-500 my-2 w-full' />

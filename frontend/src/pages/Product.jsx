@@ -44,7 +44,7 @@ const Product = () => {
       }
     } catch (error) {
       console.log(error);
-      toast.error(error.message);
+      toast.error("Please login to add to wishlist!");
     }
   };
 
