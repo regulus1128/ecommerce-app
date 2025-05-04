@@ -75,9 +75,7 @@ const Orders = () => {
       if (error.response?.status === 401) {
         toast.error("Please login again");
         navigate('/login');
-      } else {
-        toast.error("Failed to get status");
-      }
+      } 
     }
   };
   
