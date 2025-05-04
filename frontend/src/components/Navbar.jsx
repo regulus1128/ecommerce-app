@@ -10,6 +10,8 @@ const Navbar = () => {
   const [visible, setVisible] = useState(false);
   const { setShowSearch, getCartCount, token, setToken, setCartItems, backendUrl, getUserCart } = useContext(ShopContext);
   const [userDetails, setUserDetails] = useState({});
+  const [showDropdown, setShowDropdown] = useState(false);
+  
 
   const navigate = useNavigate();
 
@@ -72,9 +74,11 @@ const Navbar = () => {
         <div className='flex items-center gap-6'>
           <img src={assets.search_icon} onClick={() => setShowSearch(true)} className='w-5 cursor-pointer' alt="" />
 
-          <div className='group relative z-10'>
+          <div className='relative z-10'
+          onClick={() => setShowDropdown(!showDropdown)}
+          onMouseLeave={() => setShowDropdown(false)}>
             <Link to='/login'><CgProfile size={25}/></Link>
-            <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>
+            <div className={`${showDropdown ? 'block' : 'hidden'} md:group-hover:block absolute dropdown-menu right-0 pt-4`}>
               <div className='flex flex-col gap-2 w-40 py-3 px-5 bg-gray-100'>
               {
                 !!token ? (
@@ -108,7 +112,7 @@ const Navbar = () => {
                 {
                   !!token ? (
                     ""
-                  ) : <a href="http://localhost:5174" target="_blank" rel="noopener noreferrer" className='proza-libre-regular cursor-pointer hover:text-indigo-600'>Admin Login</a>
+                  ) : <a href="https://solevibe-admin.vercel.app" target="_blank" rel="noopener noreferrer" className='proza-libre-regular cursor-pointer hover:text-indigo-600'>Admin Login</a>
                 }
                 
               </div>
